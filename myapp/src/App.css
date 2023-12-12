@@ -1,0 +1,10 @@
+*{
+  box-sizing:border-box;
+  
+
+}
+body{
+  margin:0;
+  background-image:linear-gradient(to right, rgb(220, 69, 237),rgb(84, 213, 243));
+  font-family:sans-serif;
+}
