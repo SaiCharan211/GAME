@@ -18,7 +18,8 @@ function App() {
      [0,3,6],
      [1,4,7],
      [2,5,8],
-     [0,4,8]
+     [0,4,8],
+     [2,4,6]
  ]
    
   const handleBoxClick=(boxId)=>{
@@ -65,12 +66,19 @@ function App() {
     setGameOver(false);
     setBoard(Array(9).fill(null))
   }
+  const clearButton=()=>{
+    setScores({
+      xScore:0,
+      oScore:0
+    })
+  }
 
   return (
     <div className="bg-container">
       <ScoreBoard scores={scores} xPlaying={xPlaying}/>
       <Board board={board}  onClick={gameOver? resetBoard:handleBoxClick}/>
-      <ResetButton resetBoard={resetBoard}/>
+      <ResetButton resetBoard={resetBoard} clearButton={clearButton}/>
+     
     </div>
    
   )
